@@ -25,9 +25,24 @@ export async function GET(request: Request) {
         return NextResponse.json({ deleted: result.rowCount });
     } catch (error) {
         console.error("Error deleting expired demo accounts:", error);
+
+        if (error && typeof error === "object") {
+            const dbError = error as {
+                code?: string;
+                detail?: string;
+                constraint?: string;
+                table?: string;
+            };
+
+            console.error("Postgres details:", {
+                code: dbError.code,
+                detail: dbError.detail,
+                constraint: dbError.constraint,
+                table: dbError.table,
+            });
+        }
+
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
     }
-
-
 
 }
