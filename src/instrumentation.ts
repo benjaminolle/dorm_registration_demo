@@ -11,9 +11,10 @@ export async function register() {
 
         try {
             await initDb();
-            console.log('🚀 Database tables validated successfully at server boot.');
+            console.log('Database tables validated successfully at server boot.');
         } catch (error) {
-            console.error('🚨 Database validation failed at startup:', error);
+            console.error('Database validation failed at startup:', error);
+            throw error;
         }
     }
 }
