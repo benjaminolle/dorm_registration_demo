@@ -89,7 +89,7 @@ export async function registerUser(prevState: FormState, formData: FormData): Pr
 
     try {
         //Set demo expiration date
-        const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 7);
+        const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 2); // 2 days from creation
 
         await pool.query(
             "INSERT INTO users (username, email, password_hash, is_demo, demo_expires_at) VALUES ($1, $2, $3, $4, $5)",

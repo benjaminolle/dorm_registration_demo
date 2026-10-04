@@ -1,4 +1,3 @@
-// src/app/api/cleanup-demo/route.ts
 import pool from "@/lib/db";
 import { NextResponse } from "next/server";
 
