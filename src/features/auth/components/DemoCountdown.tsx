@@ -18,9 +18,10 @@ function getTimeLeft(expiresAt: string): string {
 }
 
 export default function DemoCountdown({ expiresAt }: { expiresAt: string }) {
-    const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(expiresAt));
+    const [timeLeft, setTimeLeft] = useState<string | null>(null);
 
     useEffect(() => {
+        setTimeLeft(getTimeLeft(expiresAt));
         const interval = setInterval(() => {
             setTimeLeft(getTimeLeft(expiresAt));
         }, 1000);
@@ -30,7 +31,11 @@ export default function DemoCountdown({ expiresAt }: { expiresAt: string }) {
     return (
         <p className="text-(length:--text-sm)">
             <strong>Demo account</strong> — data scheduled for deletion in{" "}
-            <strong className="text-red-500">{timeLeft}</strong>
+            <strong className="text-red-500">
+                {timeLeft ?? (
+                    <span className="inline-block w-24 h-3 bg-gray-200 rounded animate-pulse align-middle" />
+                )}
+            </strong>
         </p>
     );
 }

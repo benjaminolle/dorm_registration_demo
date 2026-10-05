@@ -244,7 +244,7 @@ TAILWIND CSS DEFAULTS
   }
 
   .sidebar-icon {
-    @apply text-gray-500 w-[30] p-1 bg-gray-200 rounded-lg hover:bg-gray-100 transition-all duration-200;
+    @apply w-[30px] p-1 bg-gray-200 rounded-lg hover:bg-gray-100 transition-all duration-200;
   }
 
   .bo-block {

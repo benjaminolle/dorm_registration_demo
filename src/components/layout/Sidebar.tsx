@@ -35,19 +35,22 @@ export default function Sidebar() {
             />
 
             <aside
-                className={`fixed max-lg:h-full lg:grow top-0 max-lg:pt-25 left-0 lg:relative lg:inset-auto side-nav bg-white py-5 border-r border-gray-300 shadow z-100 transition-all duration-700 ease-in-out gap-y-9 max-lg:w-full max-lg:max-w-(--mobile-menu-width) flex flex-col ${isExpanded ? "lg:w-[180px]" : "lg:w-(--sidebar-width)"} ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
+                className={`fixed max-lg:h-full lg:grow text-(length:--text-base) top-0 max-lg:pt-25 leading-[0] left-0 lg:relative lg:inset-auto side-nav bg-white py-5 border-r border-gray-300 shadow z-100 transition-all duration-700 ease-in-out gap-y-9 max-lg:w-full max-lg:max-w-(--mobile-menu-width) flex flex-col ${isExpanded ? "lg:w-[180px]" : "lg:w-(--sidebar-width)"} ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
             >
-                <div className="border-b border-gray-300 pb-4 px-3 max-lg:hidden">
+                <div className="border-b border-gray-300 font-[600] text-(length:--text-xs) pb-4 px-(--side-navlink-px) max-lg:hidden overflow-hidden">
                     <button
                         onClick={toggleExpanded}
                         aria-label={isExpanded ? "Collapse sidebar" : "Expand sidebar"}
-                        className={isExpanded ? "self-end" : "self-center"}
+                        className={`flex flex-row items-center gap-x-2 w-fit ${isExpanded ? "" : "self-center"}`}
                     >
-                        {isExpanded ? (
-                            <SidebarLeftIcon className="sidebar-icon" aria-hidden="true" />
-                        ) : (
-                            <SidebarRightIcon className="sidebar-icon" aria-hidden="true" />
-                        )}
+                        {isExpanded ? <>
+                            <SidebarLeftIcon aria-hidden="true" className="sidebar-icon" />
+                            <span>Collapse</span>
+                        </> : <SidebarRightIcon aria-hidden="true" className="sidebar-icon" />
+
+                        }
+
+
                     </button>
                 </div>
 
@@ -62,7 +65,7 @@ export default function Sidebar() {
                                         href={nav.url}
                                         onClick={closeMobile}
                                         title={!isExpanded ? nav.title : undefined}
-                                        className={`flex items-center rounded-lg py-2 text-(length:--text-base) leading-none gap-2 justify-start px-(--side-navlink-px) ${isExpanded ? "" : "lg:px-2 lg:justify-center lg:gap-0"
+                                        className={`flex items-center rounded-lg py-2 gap-2 justify-start px-(--side-navlink-px) ${isExpanded ? "" : "lg:px-2 lg:justify-center lg:gap-0"
                                             } ${isActive ? "bg-(--nav-active-bg)" : "hover:bg-(--nav-hover-bg)"}`}
                                     >
                                         <div className="items-center">

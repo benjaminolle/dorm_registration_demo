@@ -24,7 +24,6 @@ export default async function ProjectDetails({
 
 
     const dorms = await getDormsByProject(projectId);
-
     const dormsEdit = await getDormsForEdit(Number(projectId));
     const students = await getRecentStudents(projectId, 6);
 

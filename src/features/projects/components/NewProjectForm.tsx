@@ -1,13 +1,17 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { ProjectFormState, createProjectAction } from "@/features/projects/actions/projects";
 
 
-export default function NewProjectForm() {
+export default function NewProjectForm({ onSuccess }: { onSuccess: () => void }) {
     const initialState: ProjectFormState = { errors: {} };
     const [state, formAction, isPending] = useActionState(createProjectAction, initialState);
     const [projectName, setProjectName] = useState("");
+
+    useEffect(() => {
+        if (state.success) onSuccess();
+    }, [state, onSuccess]);
 
     const hasChanged = projectName.trim() !== "";
 
@@ -26,4 +30,3 @@ export default function NewProjectForm() {
         </form>
     );
 }
-

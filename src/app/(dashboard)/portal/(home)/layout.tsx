@@ -39,7 +39,7 @@ export default async function PortalLayout({ children }: { children: ReactNode }
             </main>
 
             {userInfo.is_demo && userInfo.demo_expires_at && (
-                <div className="fixed bottom-0 right-0 bg-transparent w-full items-end px-(--section-px) py-5">
+                <div className="lg:fixed lg:bottom-0 lg:right-0 bg-transparent w-full items-end px-(--section-px) py-5">
                     <DemoCountdown expiresAt={userInfo.demo_expires_at.toISOString()} />
                 </div>
             )}

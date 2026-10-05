@@ -2,7 +2,6 @@
 
 import { requireUserId, auth } from "@/lib/auth";
 import pool from "@/lib/db";
-import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
 
@@ -42,7 +41,7 @@ export async function createProjectAction(
     }
 
     revalidatePath("/portal");
-    return { errors: {} };
+    return { errors: {}, success: true };
 }
 
 

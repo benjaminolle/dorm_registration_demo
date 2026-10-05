@@ -39,9 +39,8 @@ export default async function AppPortal() {
 
             ) : (
                 <section className="w-full grow items-center justify-center py-6">
-                    <div className="items-center gap-y-3">
-                        <p className="text-2xl">You have not created any projects yet.</p>
-                        <CreateProjectButton />
+                    <div className="items-center gap-y-4">
+                        <p className="text-(length:--heading-reg)">You have not created any projects yet.</p>
                     </div>
                 </section>
             )}
