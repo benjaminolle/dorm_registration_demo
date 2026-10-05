@@ -157,7 +157,7 @@ GET USER DETAILS BY ID
 ----------------------*/
 export const getUserById = cache(async (userId: number) => {
     const result = await pool.query(
-        `SELECT id, username, email, password_hash FROM users WHERE id = $1`,
+        `SELECT id, username, email, password_hash, is_demo, demo_expires_at  FROM users WHERE id = $1`,
         [userId]
     );
     return result.rows[0];

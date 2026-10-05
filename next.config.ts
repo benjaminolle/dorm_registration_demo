@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       "*.svg": {
         loaders: [
           {
-            loader: "@svgr/webpack",
+            loader: require.resolve("@svgr/webpack"),
             options: {
               svgoConfig: {
                 plugins: [

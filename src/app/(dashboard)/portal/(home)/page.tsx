@@ -12,7 +12,7 @@ export default async function AppPortal() {
     const possessiveName = userName?.endsWith("s") ? `${userName}` + "'" : `${userName}` + "'s";
 
 
-    return projects.length > 0 ? (
+    return (
         <div className="w-full gap-y-6 md:gap-y-10">
             <PortalPageHeader title={
                 <>
@@ -22,29 +22,32 @@ export default async function AppPortal() {
                 <CreateProjectButton />
             </PortalPageHeader>
 
+            {projects.length > 0 ? (
+                <section className="w-full py-0 px-0 pb-(--section-py) gap-y-12">
+                    <div className="bo-container gap-y-12">
+                        <div className="gap-y-8 px-(--section-px)">
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                                {projects.map((project) => (
+                                    <ProjectDetailsCard project_id={project.id} pname={project.name} key={project.id} />
+                                ))}
+                            </div>
 
-            <section className="w-full py-0 px-0 pb-(--section-py) gap-y-12">
-                <div className="bo-container gap-y-12">
-                    <div className="gap-y-8 px-(--section-px)">
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                            {projects.map((project) => (
-                                <ProjectDetailsCard project_id={project.id} pname={project.name} key={project.id} />
-                            ))}
                         </div>
 
                     </div>
+                </section >
 
-                </div>
-            </section >
-
+            ) : (
+                <section className="w-full grow items-center justify-center py-6">
+                    <div className="items-center gap-y-3">
+                        <p className="text-2xl">You have not created any projects yet.</p>
+                        <CreateProjectButton />
+                    </div>
+                </section>
+            )}
         </div >
 
-    ) : (
-        <section className="w-full items-center justify-center py-6">
-            <div className="items-center gap-y-3">
-                <p className="text-2xl">You have not created any projects yet.</p>
-                <CreateProjectButton />
-            </div>
-        </section>
-    );
+
+    )
+
 }
