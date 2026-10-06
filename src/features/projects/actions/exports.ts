@@ -42,10 +42,5 @@ export async function exportStudentsCsv(projectId: number) {
 
     const csv = toCsv(students, columns);
 
-    await pool.query(
-        `INSERT INTO download_logs (project_id, user_id) VALUES ($1, $2)`,
-        [projectId, userId]
-    );
-
     return csv;
 }

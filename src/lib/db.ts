@@ -65,13 +65,6 @@ export async function initDb(): Promise<void> {
         created_at timestamptz DEFAULT now(),
         UNIQUE (project_id, admission_no)
     );
-
-    CREATE TABLE IF NOT EXISTS download_logs (
-        id serial PRIMARY KEY,
-        project_id integer NOT NULL REFERENCES projects(id) ON DELETE CASCADE,
-        user_id integer NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        downloaded_at timestamptz DEFAULT now()
-    );
 `;
 
   await pool.query(createTablesQuery);
