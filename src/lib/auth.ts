@@ -7,6 +7,9 @@ import { redirect } from "next/navigation";
 import { cache } from "react";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+    pages: {
+        signIn: '/login',
+    },
     providers: [
         Credentials({
             credentials: {

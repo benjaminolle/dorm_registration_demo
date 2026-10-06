@@ -1,12 +1,13 @@
 import CreateProjectButton from "@/components/ui/buttons/CreateProjectButton";
 import ProjectDetailsCard from "@/features/projects/components/ProjectDetailsCard";
-import { requireUserId } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import { getProjects } from "@/lib/projects";
 import PortalPageHeader from "@/components/layout/PortalPageHeader";
 import { getUsernameById } from "@/features/auth/actions/users";
 
 export default async function AppPortal() {
-    const userId = await requireUserId();
+    const session = await auth();
+    const userId = Number(session?.user?.id);
     const projects = await getProjects(userId);
     const userName = await getUsernameById(userId);
     const possessiveName = userName?.endsWith("s") ? `${userName}` + "'" : `${userName}` + "'s";
@@ -15,9 +16,7 @@ export default async function AppPortal() {
     return (
         <div className="w-full gap-y-6 md:gap-y-10">
             <PortalPageHeader title={
-                <>
-                    <strong>{possessiveName}</strong> Projects
-                </>
+                <><strong>{possessiveName}</strong> Projects</>
             }>
                 <CreateProjectButton />
             </PortalPageHeader>
