@@ -20,9 +20,9 @@
   --mobile-menu-width: min(100%, 200px);
   --topbar-px: clamp(1.25rem, 2vw, 1.5rem);
   --side-navlink-px: 0.5rem;
-  --side-nav-px: 0.5rem;
+  --side-nav-px: 1rem;
   --side-icon-width: 20px;
-  --sidebar-width: calc(var(--side-icon-width) + calc(var(--side-nav-px) *2) + calc(var(--side-navlink-px)*2));
+  --sidebar-width: calc(var(--side-icon-width) + calc(var(--side-nav-px) *2) + calc(var(--side-navlink-px) *2));
 
   --text-xs: 0.85rem;
   --text-sm: 0.9rem;
@@ -66,8 +66,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: 0 0 0 1000px inherit inset !important;
+  -webkit-text-fill-color: var(--color-text) !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 

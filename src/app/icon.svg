@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <color-profile
+       name="Artifex-Software-A98-ICC-Profile"
+       xlink:href="file:///snap/inkscape/11530/usr/share/color/icc/ghostscript/a98.icc"
+       id="color-profile2" />
+  </defs>
+  <g
+     id="layer1">
+    <rect
+       style="fill:#f5f5f5;fill-opacity:1;stroke-width:0.262971"
+       id="rect1"
+       width="135.73972"
+       height="135.55479"
+       x="-0.13652445"
+       y="-0.044063821"
+       ry="25.520548" />
+    <path
+       class="st0"
+       d="m 42.532661,54.483121 c 5.966114,0 10.802778,-4.836678 10.802778,-10.802791 0,-5.966102 -4.836664,-10.802779 -10.802778,-10.802779 -5.966095,0 -10.802772,4.836677 -10.802772,10.802779 0,5.966113 4.836677,10.802791 10.802772,10.802791 z M 114.71188,33.350879 H 64.692366 v 19.714664 h 61.821854 v -7.912316 c 0,-6.518326 -5.28402,-11.802348 -11.80234,-11.802348 z M 24.947003,25.072023 H 11.06906 V 110.39464 H 24.947003 V 81.848423 h 87.687337 v 28.546217 h 13.87794 V 81.848423 h 0.002 V 65.445593 H 24.947003 Z"
+       id="path1"
+       style="fill:#003870;fill-opacity:1;stroke-width:4.81021" />
+  </g>
+</svg>

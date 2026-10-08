@@ -28,7 +28,7 @@ export default function Sidebar() {
 
     return (
         <>
-            {/* Mobile backdrop — click to close */}
+            {/* Mobile backdrop*/}
             <div
                 onClick={closeMobile}
                 className={`fixed inset-0 bg-black/40 z-90 transition-all duration-700 ease-in-out pointer-events-none ${isMobileOpen ? "opacity-100" : "opacity-0"} lg:hidden`}
@@ -37,7 +37,7 @@ export default function Sidebar() {
             <aside
                 className={`fixed max-lg:h-full lg:grow text-(length:--text-base) top-0 max-lg:pt-25 leading-[0] left-0 lg:relative lg:inset-auto side-nav bg-white py-5 border-r border-gray-300 shadow z-100 transition-all duration-700 ease-in-out gap-y-9 max-lg:w-full max-lg:max-w-(--mobile-menu-width) flex flex-col ${isExpanded ? "lg:w-[180px]" : "lg:w-(--sidebar-width)"} ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
             >
-                <div className="border-b border-gray-300 font-[600] text-(length:--text-xs) pb-4 px-(--side-navlink-px) max-lg:hidden overflow-hidden">
+                <div className="border-b border-gray-300 font-[600] text-(length:--text-xs) pb-4 px-(--side-nav-px) max-lg:hidden overflow-hidden">
                     <button
                         onClick={toggleExpanded}
                         aria-label={isExpanded ? "Collapse sidebar" : "Expand sidebar"}

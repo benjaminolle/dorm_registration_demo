@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="484.18744"
+   height="81.707924"
+   viewBox="0 0 128.1078 21.618575"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-24.827674,-15.593089)">
+    <g
+       id="g4">
+      <g
+         id="g5"
+         transform="translate(0,-0.055982)">
+        <path
+           class="st0"
+           d="m 32.799614,23.101095 c 1.51166,0 2.737148,-1.225492 2.737148,-2.737153 0,-1.511658 -1.225488,-2.737149 -2.737148,-2.737149 -1.511656,0 -2.737148,1.225491 -2.737148,2.737149 0,1.511661 1.225492,2.737153 2.737148,2.737153 z M 51.087986,17.746723 H 38.414317 v 4.995192 h 15.664081 v -2.004778 c 0,-1.651578 -1.338836,-2.990414 -2.990412,-2.990414 z M 28.343856,15.649071 H 24.82754 v 21.618575 h 3.516316 v -7.232882 h 22.217735 v 7.232882 h 3.516315 v -7.232882 h 5.01e-4 V 25.878705 H 28.343856 Z"
+           id="path1"
+           style="fill:#f5f5f5;fill-opacity:1;stroke-width:1.21879" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10.9361px;line-height:1;font-family:'Source Sans 3';-inkscape-font-specification:'Source Sans 3 Medium';letter-spacing:0.53975px;writing-mode:lr-tb;direction:ltr;fill:#f5f5f5;fill-opacity:1;stroke-width:0.264561"
+           x="60.799114"
+           y="24.645144"
+           id="text2"
+           transform="scale(1.0020094,0.99799463)"><tspan
+             id="tspan2"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10.9361px;line-height:1;font-family:'Source Sans 3';-inkscape-font-specification:'Source Sans 3 Medium';letter-spacing:0.53975px;stroke-width:0.264561"
+             x="60.799114"
+             y="24.645144">Dorm Registration</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10.9361px;line-height:1;font-family:'Source Sans 3';-inkscape-font-specification:'Source Sans 3 Medium';letter-spacing:0.53975px;stroke-width:0.264561"
+             x="60.799114"
+             y="35.581245"
+             id="tspan4">Portal</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
