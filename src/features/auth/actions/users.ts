@@ -57,18 +57,14 @@ export async function registerUser(prevState: FormState, formData: FormData): Pr
     //Validate username
     if (!userName || userName.trim() === "") {
         errors.username = "This field cannot be empty";
-    }
-
-    if (userName.length < 2) {
+    } else if (userName.length < 2) {
         errors.username = "This field must be more than 2 characters long";
     }
 
     //Validate email
     if (!email || email.trim().length === 0) {
         errors.email = "This field cannot be empty";
-    }
-
-    if (!EMAIL_PATTERN.test(email.trim())) {
+    } else if (!EMAIL_PATTERN.test(email.trim())) {
         errors.email = "Please enter a valid email address";
     }
 
@@ -113,18 +109,25 @@ export async function loginUser(prevState: FormState, formData: FormData): Promi
     const email = formData.get("email") as string;
     const pwd = formData.get("pwd") as string;
 
+    const errors: Errors = {};
+
+
     //Validate email
     if (!email || email.trim().length === 0) {
-        return { errors: { email: "This field cannot be empty" } };
+        errors.email = "This field cannot be empty";
+    } else if (!EMAIL_PATTERN.test(email.trim())) {
+        errors.email = "Please enter a valid email address";
     }
 
-    if (!EMAIL_PATTERN.test(email.trim())) {
-        return { errors: { email: "Please enter a valid email address" } };
+    if (!pwd || pwd.trim().length === 0) {
+        errors.pwd = "This field cannot be empty";
     }
 
-    if (pwd.length < 8) {
-        return { errors: { pwd: "Password must be more than 8 characters" } };
+    //Display all errors
+    if (Object.keys(errors).length > 0) {
+        return { errors };
     }
+
     try {
         await signIn("credentials", {
             email,

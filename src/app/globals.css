@@ -227,6 +227,10 @@ TAILWIND CSS DEFAULTS
     @apply text-(length:--text-base);
   }
 
+  /* .form-error {
+    @apply text-red-500 text-(le)
+  } */
+
   button {
     @apply cursor-pointer;
   }

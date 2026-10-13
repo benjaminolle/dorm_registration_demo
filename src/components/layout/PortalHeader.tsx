@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Link from "next/link";
-import PrimaryLogo from "@/assets/full-logo.svg";
+import PrimaryLogo from "@/assets/primary-logo.svg";
 
 export default function PortalHeader({ children }: { children: ReactNode }) {
     return <header className="sticky top-0 z-999 md:relative">
