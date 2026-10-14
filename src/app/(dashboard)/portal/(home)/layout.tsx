@@ -22,7 +22,7 @@ export default async function PortalLayout({ children }: { children: ReactNode }
     return (
         <SidebarProvider>
             <PortalHeader>
-                <div className="flex-row items-center gap-1">
+                <div className="flex-row items-center gap-2">
                     <MobileMenuButton />
                     <UserDropdown userName={userInfo.username}>
                         <NavLink href="/portal/profile" title="My Profile" icon={<ProfileIcon />} />

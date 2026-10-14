@@ -31,11 +31,11 @@ export default function UserDropdown({ children, userName }: { children?: ReactN
         <div className="relative" ref={ref}>
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex flex-row gap-x-2 items-center cursor-pointer transition-all duration-300 hover:bg-(--nav-active-bg)/20 py-1 px-2 rounded-sm"
+                className="flex-row gap-x-2 items-center cursor-pointer transition-all duration-300 hover:bg-(--nav-active-bg)/20 py-1 lg:px-2 rounded-sm"
             >
                 <div
                     aria-hidden="true"
-                    className="flex size-7 items-center justify-center rounded-full bg-(--color-offwhite) text-sm font-semibold text-(--color-primary)"
+                    className="size-7 items-center justify-center rounded-full bg-(--color-offwhite) text-sm font-semibold text-(--color-primary)"
                 >
                     {initials}
                 </div>
