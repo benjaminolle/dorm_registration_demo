@@ -7,7 +7,7 @@ export default async function FrontendLayout({ children }: { children: ReactNode
 
   return (
     <>
-      <main>{children}</main>s
+      <main>{children}</main>
     </>
   );
 }
