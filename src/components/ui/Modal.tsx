@@ -39,7 +39,6 @@ export default function Modal({
             <dialog
                 ref={dialogRef}
                 onClose={onClose}
-                onBlur={onClose}
                 className={`px-(--section-px) bg-transparent ${className}`}
             ><div className="rounded-lg p-6 bg-(--color-white) gap-y-3">
                     <button
