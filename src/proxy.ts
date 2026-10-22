@@ -6,12 +6,6 @@ export async function proxy(request: NextRequest) {
     const { nextUrl } = request;
     const pathname = nextUrl.pathname;
 
-    //Security Headers
-    const response = NextResponse.next();
-    response.headers.set("X-Frame-Options", "DENY");
-    response.headers.set("X-Content-Type-Options", "nosniff");
-    response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-
     //Auth
     const session = await auth();
     const isLoggedIn = !!session?.user;
@@ -26,7 +20,7 @@ export async function proxy(request: NextRequest) {
         return NextResponse.redirect(new URL("/portal", nextUrl));
     }
 
-    return response;
+    return NextResponse.next();
 }
 
 export const config = {
